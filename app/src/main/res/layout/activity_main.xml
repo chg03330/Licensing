@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/TopLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bgstyle_basic">
+
+        <RelativeLayout
+            android:id="@+id/Logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:onClick="mOnClick"
+            android:clickable="true">
+
+            <ImageButton
+                android:id="@+id/LDimagebutton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo"
+                android:clickable="false"/>
+
+            <TextView
+                style="@style/button_TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/LDimagebutton"
+                android:gravity="center"
+                android:text="자격중"
+                android:textColor="#093666"
+                android:textSize="30dp"
+                android:clickable="false"/>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <Button
+                android:id="@+id/OpenLikeListButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/favorites"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:onClick="mOnClick" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/DetailLinearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TopLayout1"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/EditText1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="검색어 입력"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:id="@+id/SearchButton"
+                style="@style/button_TextStyle"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bgstyle_basic"
+
+                android:onClick="mOnClick"
+                android:text="검색"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/DetailLinearLayout1"
+        android:orientation="vertical"
+        android:paddingTop="1dp">
+
+        <TextView
+            android:id="@+id/MStoday"
+            style="@style/button_TextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bgstyle_basic"
+            android:text="Today"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp" />
+
+        <ListView
+            android:id="@+id/ListView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <RelativeLayout
+        android:id="@+id/TopLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bgstyle_basic">
+
+        <RelativeLayout
+            android:id="@+id/Logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:onClick="mOnClick"
+            android:clickable="true">
+
+            <ImageButton
+                android:id="@+id/LDimagebutton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo"
+                android:clickable="false"/>
+
+            <TextView
+                style="@style/button_TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/LDimagebutton"
+                android:gravity="center"
+                android:text="자격중"
+                android:textColor="#093666"
+                android:textSize="30dp"
+                android:clickable="false"/>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <Button
+                android:id="@+id/OpenLikeListButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/favorites"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:onClick="mOnClick" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/DetailLinearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TopLayout1"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/EditText1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="검색어 입력"
+                android:inputType="textPersonName"
+                android:maxLength="20"
+                android:lines="1"
+                android:singleLine="true"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:id="@+id/SearchButton"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bgstyle_basic"
+                android:onClick="mOnClick"
+
+                style="@style/button_TextStyle"
+                android:text="검색"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/DetailLinearLayout2"
+        android:layout_below="@id/DetailLinearLayout1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/DLL2_LL2_T1T2T3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bgstyle_basic">
+
+
+                        <TextView
+                            android:id="@+id/Text1_Text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="20dp"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:gravity="left|center"
+                            android:text="text1_title"
+                            android:textColor="#093666"
+                            style="@style/button_TextStyle"
+                            />
+                        <Button
+                            android:id="@+id/LikeButton"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:onClick="mOnClick"
+                            android:background="@drawable/star_off"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    >
+
+                        <TextView
+                            android:id="@+id/Text3_Title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="#093666"
+                            android:text="● 시험 수수료 "
+                            />
+                        <TextView
+                            android:id="@+id/Text3_Text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:paddingLeft="20dp"
+                            android:text=""
+                            />
+
+                    <TextView
+                        android:id="@+id/Text4_Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:textStyle="bold"
+                        android:textColor="#093666"
+                        android:text="● 자격증 시험 일정"
+                        />
+                    <TextView
+                        android:id="@+id/Text4_Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:paddingLeft="20dp"
+                        android:text=""
+                        />
+
+                    <TextView
+                        android:id="@+id/Text5_Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#093666"
+                        android:text="● 취득 방법"
+                        />
+                    <TextView
+                        android:id="@+id/Text5_Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:paddingLeft="20dp"
+                        android:text="Text3_Text"
+                        />
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
